@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  get '/microphones' => 'microphones#index'
+  post '/microphones' => 'microphones#create'
+  get '/microphones/:id' => 'microphones#show'
+  delete '/microphones/:id' => 'microphones#destroy'
+
 end
