@@ -10,7 +10,6 @@ require 'Unirest'
 
 # puts JSON.pretty_generate(response.body)
 
-response = Unirest.delete("http://localhost:3000/microphones/4")
+response = Unirest.delete("http://localhost:3000/microphones/7")
 
- 
 puts JSON.pretty_generate(response.body)
