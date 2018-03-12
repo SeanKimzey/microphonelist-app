@@ -1,0 +1,2 @@
+class Microphone < ApplicationRecord
+end
