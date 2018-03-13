@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   post '/microphones' => 'microphones#create'
   get '/microphones/:id' => 'microphones#show'
   delete '/microphones/:id' => 'microphones#destroy'
+  patch '/microphones/:id' => 'microphones#update'
 
 
 end

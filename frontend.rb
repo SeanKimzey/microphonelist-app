@@ -10,6 +10,15 @@ require 'Unirest'
 
 # puts JSON.pretty_generate(response.body)
 
-response = Unirest.delete("http://localhost:3000/microphones/7")
+# response = Unirest.delete("http://localhost:3000/microphones/7")
 
+# puts JSON.pretty_generate(response.body)
+
+response = Unirest.patch("localhost:3000/microphones/2", parameters: {
+    input_make: "AKG???",
+    input_model: "414",
+    input_mictype: "Condenser",
+    input_price: "9967"
+  }
+)
 puts JSON.pretty_generate(response.body)

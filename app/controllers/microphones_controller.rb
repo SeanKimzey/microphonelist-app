@@ -24,6 +24,18 @@ class MicrophonesController < ApplicationController
     render json: microphone.as_json
   end
 
+  def update
+    microphone =Microphone.find_by(id: params[:id])
+    microphone.update(
+      make: params[:input_make],
+      model: params[:input_model],
+      mictype: params[:input_mictype],
+      price: params[:input_price]
+      )
+
+    render json: microphone.as_json
+  end
+
   def destroy
     the_id = params[:id]
     microphone = Microphone.find_by(id: the_id)
